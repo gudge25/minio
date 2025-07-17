@@ -18,3 +18,16 @@ MinIO працює в режимі erasure-coded pool з такими харак
 ```bash
 docker exec -it minio mc alias set local http://localhost:9000 admin CHANGE_ME
 docker exec -it minio mc admin info local
+
+# Samba as Storage
+
+This guide explains how to mount multiple Samba shares for use as a storage backend (e.g., for MinIO).
+
+---
+
+## 🛠 Prerequisites
+
+Install the required package:
+
+```bash
+sudo apt install cifs-utils -y
