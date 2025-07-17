@@ -1,6 +1,6 @@
 services:
   minio:
-    image: minio/minio:RELEASE.2024-12-18T13-15-44Z-cpuv1
+    image: minio/minio:RELEASE.2024-12-18T13-15-44Z-cpuv1 # LATEST обрізаний
     container_name: minio
     hostname: minio
     ports:
