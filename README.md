@@ -31,3 +31,14 @@ Install the required package:
 
 ```bash
 sudo apt install cifs-utils -y
+```
+
+## ⚙️ Mount Configuration
+Edit the /etc/fstab file and add the following lines to mount Samba shares at boot:
+```
+//192.168.2.2/share1 /mnt/minio-union/share1 cifs username=Username,password=Password,vers=3.0,iocharset=utf8,file_mode=0777,dir_mode=0777,nofail,_netdev,cache=none,actimeo=0,soft,rw,noserverino 0 0
+//192.168.2.3/share2 /mnt/minio-union/share2 cifs username=Username,password=Password,vers=3.0,iocharset=utf8,file_mode=0777,dir_mode=0777,nofail,_netdev,cache=none,actimeo=0,soft,rw,noserverino 0 0
+//192.168.2.4/share3 /mnt/minio-union/share3 cifs username=Username,password=Password,vers=3.0,iocharset=utf8,file_mode=0777,dir_mode=0777,nofail,_netdev,cache=none,actimeo=0,soft,rw,noserverino 0 0
+//192.168.2.5/share4 /mnt/minio-union/share4 cifs username=Username,password=Password,vers=3.0,iocharset=utf8,file_mode=0777,dir_mode=0777,nofail,_netdev,cache=none,actimeo=0,soft,rw,noserverino 0 0
+```
+### Note: Replace Username and Password with your actual Samba credentials.
