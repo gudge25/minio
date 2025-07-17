@@ -17,7 +17,7 @@ MinIO працює в режимі erasure-coded pool з такими харак
 
 ```bash
 docker exec -it minio mc alias set local http://localhost:9000 admin CHANGE_ME
-docker exec -it minio mc admin info local
+docker exec -it minio mc admin info local ```
 
 # Samba as Storage
 
